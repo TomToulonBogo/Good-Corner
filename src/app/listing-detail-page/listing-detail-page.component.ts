@@ -9,7 +9,7 @@ import { Listing } from '../type';
   styleUrls: ['./listing-detail-page.component.scss']
 })
 export class ListingDetailPageComponent {
-  public listing!: any;
+  listing!: any;
 
   constructor(
     private route: ActivatedRoute,
