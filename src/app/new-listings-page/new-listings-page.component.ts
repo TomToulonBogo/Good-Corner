@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ListingsService } from '../listings.service';
+
 
 @Component({
   selector: 'app-new-listings-page',
@@ -9,14 +11,18 @@ import { Router } from '@angular/router';
 export class NewListingsPageComponent {
   constructor(
     private router: Router,
+    private listingsService: ListingsService,
+
   ) { }
 
   ngOnInit(): void {
 
   }
 
-  onSubmit(): void {
-    alert('Creating a new listing...');
-    this.router.navigateByUrl('/my-listings');
+  onSubmit({ name, description, price }: {[key: string]: any}/* A re-vérifier : https://medium.com/front-end-weekly/typescript-error-ts7031-makes-me-go-huh-c81cf76c829b */): void {
+    this.listingsService.createListing(name, description, price)
+      .subscribe(() => {
+        this.router.navigateByUrl('/my-listings')
+      })
   }
 }

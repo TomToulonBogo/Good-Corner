@@ -10,7 +10,7 @@ import { Listing } from '../type';
 })
 export class ListingDetailPageComponent {
   isLoading: boolean = true;
-  listing!: any;
+  listing: Listing;
 
   constructor(
     private route: ActivatedRoute,

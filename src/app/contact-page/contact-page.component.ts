@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Listing } from '../type';
-import { fakeListings } from '../fake-data';
+import { ListingsService } from '../listings.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -11,17 +11,21 @@ import { fakeListings } from '../fake-data';
 export class ContactPageComponent {
   email: string = '';
   message: string = '';
-  listing: Listing;
+  public listing!: any; 
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private listingsService: ListingsService
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.listing = fakeListings.find(listing => listing.id === id) as Listing;
-    this.message = `Hi, I'm interested in your ${this.listing.name.toLowerCase()}!`;
+    this.listingsService.getListingById(id)
+      .subscribe(listing => {
+        this.listing = listing;
+        this.message = `Hi, I'm interested in your ${this.listing.name.toLowerCase()}!`;
+      });    
   }
 
   sendMessage(): void {
