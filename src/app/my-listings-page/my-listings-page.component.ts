@@ -5,7 +5,7 @@ import { Listing } from '../type';
 @Component({
   selector: 'app-my-listings-page',
   templateUrl: './my-listings-page.component.html',
-  styleUrls: ['./my-listings-page.component.css']
+  styleUrls: ['./my-listings-page.component.scss']
 })
 export class MyListingsPageComponent {
   listings: Listing[] = [];

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "good-corner-9b92c": {
+      "hosting": {
+        "good-corner": [
+          "good-corner-9b92c-26065"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "good-corner-9b92c"
+  }
+}

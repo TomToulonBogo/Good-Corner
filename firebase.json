@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "good-corner",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
