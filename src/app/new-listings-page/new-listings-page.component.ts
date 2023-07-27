@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ListingsService } from '../listings.service';
+import { pipe, tap } from 'rxjs';
 
 
 @Component({
@@ -21,8 +22,11 @@ export class NewListingsPageComponent {
 
   onSubmit({ name, description, price }: {[key: string]: any}/* A re-vérifier : https://medium.com/front-end-weekly/typescript-error-ts7031-makes-me-go-huh-c81cf76c829b */): void {
     this.listingsService.createListing(name, description, price)
-      .subscribe(() => {
+    .pipe(
+      tap(() => {
         this.router.navigateByUrl('/my-listings')
       })
+    )
+      .subscribe();
   }
 }

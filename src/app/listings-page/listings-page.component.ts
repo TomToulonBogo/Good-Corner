@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Listing } from '../type';
 import { ListingsService } from '../listings.service';
+import { pipe, tap } from 'rxjs';
 
 // RxJS & HTTPClient
 
@@ -18,6 +19,10 @@ export class ListingsPageComponent {
 
   ngOnInit(): void {
     this.listingsService.getListings()
-      .subscribe(listings => this.listings = listings);
+    .pipe(
+      tap((listings: any) => 
+      this.listings = listings)
+    )
+    .subscribe();
   }
 }

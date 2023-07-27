@@ -6,11 +6,12 @@ import { EditListingPageComponent } from './edit-listing-page/edit-listing-page.
 import { compileClassMetadata } from '@angular/compiler';
 import { MyListingsPageComponent } from './my-listings-page/my-listings-page.component';
 import { NewListingsPageComponent } from './new-listings-page/new-listings-page.component';
+import { ListingDetailPageComponent } from './listing-detail-page/listing-detail-page.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/listings', pathMatch: 'full'},
   {path: 'listings', component: ListingsPageComponent, pathMatch: 'full'},
-  {path: 'listings/:id', component: ListingsPageComponent},
+  {path: 'listings/:id', component: ListingDetailPageComponent},
   {path: 'contact/:id', component: ContactPageComponent}, 
   {path: 'edit-listing/:id', component: EditListingPageComponent},
   {path: 'my-listings', component: MyListingsPageComponent},

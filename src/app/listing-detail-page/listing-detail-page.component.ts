@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ListingsService } from '../listings.service';
 import { Listing } from '../type';
+import { pipe, tap } from 'rxjs';
 
 @Component({
   selector: 'app-listing-detail-page',
@@ -20,11 +21,19 @@ export class ListingDetailPageComponent {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.listingsService.getListingById(id)
-      .subscribe(listing => {
-        this.listing = listing;
-        this.isLoading = false;
-      });
+    // La bonne méthode pour .subscribe !!!
+      .pipe(
+        tap((listing) => {
+          this.listing = listing;
+          this.isLoading = false})
+      )
+      .subscribe();
+    // La bonne méthode pour .subscribe !!!
+
     this.listingsService.addViewToListing(id)
-      .subscribe (() => console.log('Views updated'));
+    .pipe(
+      tap(() => console.log('Views updated'))
+    )
+      .subscribe ();
   }
 }
