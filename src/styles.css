@@ -77,4 +77,7 @@ button-container {
 
 .nav-bar {
   border-bottom: 2px solid black;
+}
+.nav-bar--heading {
+  margin-top: 0;
 }/*# sourceMappingURL=styles.css.map */

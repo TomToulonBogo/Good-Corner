@@ -1,13 +1,13 @@
 .layout {
 
     &-content {
-        background-color: #EEE;
+        background-color: $auburn;
         min-height: 100vh;
         padding: 0;
         width: 100vw;
 
         &--column {
-            background-color: white;
+            background-color: $auburn;
             margin: 0 auto;
             max-width: 700px;
             min-height: 100vh;
