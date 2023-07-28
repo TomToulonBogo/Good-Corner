@@ -1,13 +1,21 @@
 button {
-    background-color: black;
-    border: none;
-    border-radius: 8px;
-    color: white;
+    color: #01746c;
     cursor: pointer;
     outline: none;
     padding: 16px;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--grey-400, #C7CBD1);
+    background: var(--grey-200, #F1F2F4);
+    box-shadow: 5px 5px 13px 0px rgba(205, 207, 210, 0.90), -5px -5px 10px 0px rgba(251, 253, 255, 0.90), 5px -5px 10px 0px rgba(205, 207, 210, 0.20), -5px 5px 10px 0px rgba(205, 207, 210, 0.20), -1px -1px 2px 0px rgba(205, 207, 210, 0.50) inset, 1px 1px 2px 0px rgba(251, 253, 255, 0.30) inset;
+
+    &:active {
+        border-radius: 8px;
+        border: 1px solid var(--grey-400, #C7CBD1);
+        background: #e0e0e0;
+        box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+    }
     
     &-container {
         position: absolute;
@@ -20,10 +28,4 @@ button {
 
 .buttons-container > button {
     margin-left: 8px;
-}
-
-.my-listings-button {
-    position: absolute;
-    top: .5rem;
-    right: 16px;
 }

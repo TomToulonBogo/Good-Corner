@@ -4,7 +4,6 @@
         <div class="layout-content--wrap">
             <router-outlet></router-outlet>
         </div>
-        <button (click)="signOutClicked()">Sign Out</button>
     </div>
 </div>
 <div id="max-width-column" *ngIf="!(auth.user | async)">

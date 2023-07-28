@@ -17,8 +17,4 @@ export class AppComponent {
   signInClicked() {
     this.auth.signInWithPopup(new GoogleAuthProvider());
   }
-
-  signOutClicked(): void {
-    this.auth.signOut();
-  }
 }

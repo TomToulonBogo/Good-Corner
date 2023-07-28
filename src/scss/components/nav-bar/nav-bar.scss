@@ -1,7 +1,14 @@
 .nav-bar {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--grey-100, #01746c);
+    display: flex;
+    padding: 24px 0px;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    &--heading {
-        margin-top: 0;
+    &--buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 24px;
     }
 }
