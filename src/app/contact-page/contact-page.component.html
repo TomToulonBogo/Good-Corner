@@ -1,19 +1,26 @@
-<div class="layout--contact">
-    <h3>Send the owner a message</h3>
-    <form action="">
-        <label for="">
-            Your email address :
+<div>
+    <div class="layout--contact-header">
+        <h3>Send the owner a message</h3>
+        <a routerLink="/listings"> Go back</a>
+    </div>
+    <form action="" class="layout--contact">
+        <div class="form--input">
+            <label for="" class="input">
+                Your email address :
+            </label>
             <input name="email" [(ngModel)]="email"/>
-        </label>
-        <label for="">
-            Your message :
+        </div>
+        <div class="form--input">
+            <label for="" class="input">
+                Your message :
+            </label>
             <textarea 
             name="message" 
             rows="5" 
             cols="20"
             [(ngModel)]="message"
             ></textarea>
-        </label>
+        </div>
     </form>
     <button (click)="sendMessage()">Send</button>
 </div>

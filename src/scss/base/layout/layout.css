@@ -56,4 +56,24 @@
 }
 .layout--detail-header a:active {
   color: black;
+}
+.layout--contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.layout--contact-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.layout--contact-header a {
+  color: #01746c;
+}
+.layout--contact-header a:hover {
+  text-decoration: underline;
+}
+.layout--contact-header a:active {
+  color: black;
 }/*# sourceMappingURL=layout.css.map */

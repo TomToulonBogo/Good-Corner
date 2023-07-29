@@ -24,7 +24,7 @@ export class ContactPageComponent {
     this.listingsService.getListingById(id)
       .subscribe(listing => {
         this.listing = listing;
-        this.message = `Hi, I'm interested in your ${this.listing.name.toLowerCase()}!`;
+        this.message = `Hi, I'm interested in your ${this.listing.name.toLowerCase()} !`;
       });    
   }
 

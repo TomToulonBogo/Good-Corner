@@ -71,5 +71,31 @@
             }
         }
     }
+
+    &--contact {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        &-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            a {
+                color: #01746c;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+    
+                &:active {
+                    color: black;
+                }
+            }
+        }
+    }
+    
 }
 
