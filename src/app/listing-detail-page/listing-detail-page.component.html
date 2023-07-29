@@ -1,8 +1,10 @@
 <div class="layout--detail" *ngIf="!isLoading">
-    <a routerLink="/listings">
-        <button>Back</button>
-    </a>
-    <h2>{{listing.name}}</h2>
+    <div class="layout--detail-header">
+        <a routerLink="/listings">
+            Go back
+        </a>
+        <h2>{{listing.name}}</h2>
+    </div>
     <p>This listing has been viewed {{listing.views}} times</p>
     <p>{{listing.description}}</p>
     <p>${{listing.price}}</p>

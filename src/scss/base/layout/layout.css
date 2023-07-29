@@ -41,4 +41,19 @@
 }
 .layout--dataForm-header a:active {
   color: black;
+}
+.layout--detail-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.layout--detail-header a {
+  color: #01746c;
+}
+.layout--detail-header a:hover {
+  text-decoration: underline;
+}
+.layout--detail-header a:active {
+  color: black;
 }/*# sourceMappingURL=layout.css.map */
