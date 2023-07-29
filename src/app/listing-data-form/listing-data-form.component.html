@@ -1,17 +1,17 @@
-<form (ngSubmit)="onButtonClicked()">
-    <div>
+<form (ngSubmit)="onButtonClicked()" class="form">
+    <div class="form--name">
         <label for="name">
             Name:
         </label>
         <input id="name" name="name" type="text" [(ngModel)]="name" />
     </div>
-    <div>
+    <div class="form--description">
         <label for="description">
             Item Description:
         </label>
         <input id="description" name="description" type="text" [(ngModel)]="description" />
     </div>
-    <div>
+    <div class="form--price">
         <label for="price">
             Price:
         </label>

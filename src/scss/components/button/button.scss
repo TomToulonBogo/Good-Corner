@@ -10,6 +10,11 @@ button {
     background: var(--grey-200, #F1F2F4);
     box-shadow: 5px 5px 13px 0px rgba(205, 207, 210, 0.90), -5px -5px 10px 0px rgba(251, 253, 255, 0.90), 5px -5px 10px 0px rgba(205, 207, 210, 0.20), -5px 5px 10px 0px rgba(205, 207, 210, 0.20), -1px -1px 2px 0px rgba(205, 207, 210, 0.50) inset, 1px 1px 2px 0px rgba(251, 253, 255, 0.30) inset;
 
+    &:hover {
+        background-color: #dfdfdf;
+        transition: 0.3s;
+    }
+
     &:active {
         border-radius: 8px;
         border: 1px solid var(--grey-400, #C7CBD1);

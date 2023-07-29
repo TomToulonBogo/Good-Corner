@@ -1,4 +1,4 @@
-<div class="card" *ngFor="let listing of listings">
+<div class="card card--my-listings" *ngFor="let listing of listings">
     <h3>{{listing.name}}</h3>
     <p>{{listing.description}}</p>
     <p>${{listing.price}}</p>
@@ -10,5 +10,5 @@
     </div>
 </div>
 <a routerLink="/new-listing">
-    <button>Let's create a new listing</button>
+    <button>Create new listing</button>
 </a>

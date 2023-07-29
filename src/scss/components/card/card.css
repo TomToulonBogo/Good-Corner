@@ -1,15 +1,23 @@
 .card {
   padding: 16px;
   display: flex;
-  width: 10rem;
-  min-height: 7rem;
+  width: 12rem;
+  min-height: 10rem;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border-radius: 65px;
+  border-radius: 16px;
   background: #f1f2f4;
   box-shadow: 20px 20px 40px #cdcecf, -20px -20px 40px #ffffff;
+  border: 1px solid white;
 }
 .card h3 {
   color: #01746c;
+}
+.card--my-listings {
+  padding: 0;
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
 }/*# sourceMappingURL=card.css.map */
