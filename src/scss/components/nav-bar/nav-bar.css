@@ -1,9 +1,9 @@
 .nav-bar {
   border-bottom: 2px solid var(--grey-100, #01746c);
   display: flex;
-  padding: 24px 0px;
+  padding: 1.5rem 5rem;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .nav-bar--buttons {
   display: flex;

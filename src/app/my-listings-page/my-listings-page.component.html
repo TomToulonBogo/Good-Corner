@@ -1,3 +1,6 @@
+<a routerLink="/new-listing">
+    <button class="button--creating">Create new listing</button>
+</a>
 <div class="card card--my-listings" *ngFor="let listing of listings">
     <h3>{{listing.name}}</h3>
     <p>{{listing.description}}</p>
@@ -9,6 +12,3 @@
         <button (click)="onDeleteClicked(listing.id)">Delete</button>
     </div>
 </div>
-<a routerLink="/new-listing">
-    <button>Create new listing</button>
-</a>

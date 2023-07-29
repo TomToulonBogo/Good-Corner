@@ -1,5 +1,8 @@
-<div class="content-box" *ngIf="listing">
-    <h2>Edit Listing</h2>
+<div class="layout--edit" *ngIf="listing">
+    <div class="layout--dataForm-header">
+        <h2>Edit Listing</h2>
+        <a routerLink="/my-listings">Go back</a>
+    </div>
     <app-listing-data-form buttonText="Save Changes"
     [currentName]="listing.name"
     [currentDescription]="listing.description"

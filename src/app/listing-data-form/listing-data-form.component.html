@@ -1,21 +1,21 @@
 <form (ngSubmit)="onButtonClicked()" class="form">
-    <div class="form--name">
+    <div class="form--input form--name">
         <label for="name">
             Name:
         </label>
-        <input id="name" name="name" type="text" [(ngModel)]="name" />
+        <input name="name" type="text" placeholder="The name of your product" [(ngModel)]="name" />
     </div>
-    <div class="form--description">
+    <div class="form--input form--description">
         <label for="description">
             Item Description:
         </label>
-        <input id="description" name="description" type="text" [(ngModel)]="description" />
+        <input name="description" type="text" placeholder="The description of your product" [(ngModel)]="description" />
     </div>
-    <div class="form--price">
+    <div class="form--input form--price">
         <label for="price">
             Price:
         </label>
-        <input id="price" name="price" type="text" [(ngModel)]="price" />
+        <input name="price" type="text" placeholder="The price of your product" [(ngModel)]="price" />
     </div>
-    <button type="submit">{{buttonText}}</button>
+    <button type="submit" class="button--submit">{{buttonText}}</button>
 </form>

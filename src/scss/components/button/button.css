@@ -12,6 +12,7 @@ button {
 }
 button:hover {
   background-color: #dfdfdf;
+  text-decoration: underline;
   transition: 0.3s;
 }
 button:active {
@@ -25,6 +26,11 @@ button-container {
   right: 0px;
   bottom: 0px;
   padding: 16px;
+}
+
+.button--submit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .buttons-container > button {

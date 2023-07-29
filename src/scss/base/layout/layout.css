@@ -9,7 +9,7 @@
   margin: 0 auto;
   max-width: inherit;
   min-height: 100vh;
-  padding: 16px;
+  padding: 0;
   position: relative;
 }
 .layout-content--wrap {
@@ -26,4 +26,19 @@
   flex-wrap: wrap;
   gap: 5rem;
   justify-content: center;
+}
+.layout--dataForm-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.layout--dataForm-header a {
+  color: #01746c;
+}
+.layout--dataForm-header a:hover {
+  text-decoration: underline;
+}
+.layout--dataForm-header a:active {
+  color: black;
 }/*# sourceMappingURL=layout.css.map */

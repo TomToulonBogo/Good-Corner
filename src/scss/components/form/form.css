@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.31rem;
+  padding: 3rem 4rem;
+}
+.form--input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form--input input {
+  border-radius: 8px;
+  border: 1px solid var(--grey-100, #FFF);
+  background: linear-gradient(135deg, #E5E6E8 0%, #FDFEFF 100%);
+  box-shadow: 4px 4px 10px 0px rgba(188, 189, 190, 0.9), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px -4px 8px 0px rgba(188, 189, 190, 0.2), -4px 4px 8px 0px rgba(188, 189, 190, 0.2), -1px -1px 2px 0px rgba(188, 189, 190, 0.5) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset;
+}/*# sourceMappingURL=form.css.map */

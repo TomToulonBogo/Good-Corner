@@ -1,6 +1,22 @@
 h1 {
-    color: hsla(176, 98%, 23%, 1);
+    margin: auto;
+    display: flex;
+    gap: 1.67rem;
+    align-items: center;
+    color: #01746c;
     font-family: 'Righteous', cursive;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &::before {
+        content: '';
+        mask-image: url('../../../../ressources/svg/logo-good-corner.svg');
+        width: 47.034px;
+        height: 44px;
+        background-color: #01746c;
+    }
 }
 
 a {
