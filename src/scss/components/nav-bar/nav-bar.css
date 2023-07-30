@@ -5,6 +5,26 @@
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .nav-bar h1 {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 52px;
+  }
+  .nav-bar--buttons {
+    justify-items: center;
+  }
+}
+.nav-bar > a {
+  text-decoration: none;
+}
+.nav-bar > a:hover {
+  text-decoration: none;
+}
 .nav-bar--buttons {
   display: flex;
   justify-content: flex-end;

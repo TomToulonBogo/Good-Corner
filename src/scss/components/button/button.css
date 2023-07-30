@@ -1,4 +1,4 @@
-button {
+.button {
   color: #01746c;
   cursor: pointer;
   outline: none;
@@ -10,18 +10,18 @@ button {
   background: var(--grey-200, #F1F2F4);
   box-shadow: 5px 5px 13px 0px rgba(205, 207, 210, 0.9), -5px -5px 10px 0px rgba(251, 253, 255, 0.9), 5px -5px 10px 0px rgba(205, 207, 210, 0.2), -5px 5px 10px 0px rgba(205, 207, 210, 0.2), -1px -1px 2px 0px rgba(205, 207, 210, 0.5) inset, 1px 1px 2px 0px rgba(251, 253, 255, 0.3) inset;
 }
-button:hover {
+.button:hover {
   background-color: #dfdfdf;
   text-decoration: underline;
   transition: 0.3s;
 }
-button:active {
+.button:active {
   border-radius: 8px;
   border: 1px solid var(--grey-400, #C7CBD1);
   background: #e0e0e0;
   box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
 }
-button-container {
+.button-container {
   position: absolute;
   right: 0px;
   bottom: 0px;

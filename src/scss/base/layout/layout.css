@@ -18,6 +18,13 @@
   background: #f1f2f4;
   box-shadow: inset 20px 20px 60px #cdcecf, inset -20px -20px 60px #ffffff;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .layout-content--wrap {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
 .layout--card {
   display: flex;
   align-items: center;
@@ -32,29 +39,11 @@
   justify-content: space-between;
   align-items: center;
 }
-.layout--dataForm-header a {
-  color: #01746c;
-}
-.layout--dataForm-header a:hover {
-  text-decoration: underline;
-}
-.layout--dataForm-header a:active {
-  color: black;
-}
 .layout--detail-header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-}
-.layout--detail-header a {
-  color: #01746c;
-}
-.layout--detail-header a:hover {
-  text-decoration: underline;
-}
-.layout--detail-header a:active {
-  color: black;
 }
 .layout--contact {
   display: flex;
@@ -66,13 +55,4 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-.layout--contact-header a {
-  color: #01746c;
-}
-.layout--contact-header a:hover {
-  text-decoration: underline;
-}
-.layout--contact-header a:active {
-  color: black;
 }/*# sourceMappingURL=layout.css.map */

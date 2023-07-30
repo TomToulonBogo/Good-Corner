@@ -4,9 +4,11 @@
         <div class="layout-content--wrap">
             <router-outlet></router-outlet>
         </div>
+        <app-footer></app-footer>
     </div>
 </div>
-<div id="max-width-column" *ngIf="!(auth.user | async)">
+<div id="layout-content layout-signIn" *ngIf="!(auth.user | async)">
     <h1>You need to sign in first !</h1>
-    <button (click)="signInClicked()">Sign in with Google</button>
+    <button class="button" (click)="signInClicked()">Sign in with Google</button>
+    <app-footer></app-footer>
 </div>
