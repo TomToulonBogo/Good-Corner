@@ -2,6 +2,7 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  color: #01746c;
 }
 
 div {
@@ -44,6 +45,56 @@ input, textarea {
   flex-wrap: wrap;
   gap: 5rem;
   justify-content: center;
+}
+.layout--dataForm-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.layout--dataForm-header a {
+  color: #01746c;
+}
+.layout--dataForm-header a:hover {
+  text-decoration: underline;
+}
+.layout--dataForm-header a:active {
+  color: black;
+}
+.layout--detail-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.layout--detail-header a {
+  color: #01746c;
+}
+.layout--detail-header a:hover {
+  text-decoration: underline;
+}
+.layout--detail-header a:active {
+  color: black;
+}
+.layout--contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.layout--contact-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.layout--contact-header a {
+  color: #01746c;
+}
+.layout--contact-header a:hover {
+  text-decoration: underline;
+}
+.layout--contact-header a:active {
+  color: black;
 }
 
 h1 {
@@ -101,8 +152,10 @@ button-container {
   bottom: 0px;
   padding: 16px;
 }
-button--creating {
-  margin-bottom: 2rem;
+
+.button--submit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .buttons-container > button {
@@ -131,6 +184,24 @@ button--creating {
   width: auto;
   justify-content: space-around;
   margin: 1.5rem 0 1.5rem 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.31rem;
+  padding: 3rem 4rem;
+}
+.form--input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form--input input {
+  border-radius: 8px;
+  border: 1px solid var(--grey-100, #FFF);
+  background: linear-gradient(135deg, #E5E6E8 0%, #FDFEFF 100%);
+  box-shadow: 4px 4px 10px 0px rgba(188, 189, 190, 0.9), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px -4px 8px 0px rgba(188, 189, 190, 0.2), -4px 4px 8px 0px rgba(188, 189, 190, 0.2), -1px -1px 2px 0px rgba(188, 189, 190, 0.5) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset;
 }
 
 .nav-bar {
