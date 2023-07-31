@@ -11,7 +11,16 @@
   box-shadow: 20px 20px 40px #cdcecf, -20px -20px 40px #ffffff;
   border: 1px solid white;
 }
-.card h3 {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+.card a {
+  text-decoration: none;
+}
+.card a h3 {
   color: #01746c;
 }
 .card--my-listings {
@@ -20,10 +29,4 @@
   width: auto;
   justify-content: space-around;
   margin: 1.5rem 0 1.5rem 0;
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .card--my-listings {
-    flex-direction: column;
-    padding: 1rem;
-  }
 }/*# sourceMappingURL=card.css.map */
