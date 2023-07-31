@@ -9,7 +9,12 @@
         <label for="description">
             Item Description:
         </label>
-        <input name="description" type="text" placeholder="The description of your product" [(ngModel)]="description" />
+        <textarea name="description" 
+        type="text" 
+        placeholder="The description of your product" 
+        rows="5"
+        [(ngModel)]="description"
+        ></textarea>
     </div>
     <div class="form--input form--price">
         <label for="price">

@@ -25,6 +25,12 @@
     border-radius: 0;
   }
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .layout-content--wrap {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .layout--card {
   display: flex;
   align-items: center;

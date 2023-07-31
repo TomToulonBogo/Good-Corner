@@ -11,6 +11,34 @@
   box-shadow: 20px 20px 40px #cdcecf, -20px -20px 40px #ffffff;
   border: 1px solid white;
 }
+.card:hover {
+  border: 1px solid #01746c;
+  transition: 0.2s ease-in-out;
+}
+.card--descript {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card--descript:hover::after {
+  content: "";
+  -webkit-mask-image: url("../../../../ressources/svg/eye.svg");
+          mask-image: url("../../../../ressources/svg/eye.svg");
+  width: 16px;
+  height: 16px;
+  background: #01746c;
+}
+.card--descript::after {
+  content: "";
+  -webkit-mask-image: url("../../../../ressources/svg/eye.svg");
+          mask-image: url("../../../../ressources/svg/eye.svg");
+  width: 16px;
+  height: 16px;
+  position: relative;
+  bottom: -10px;
+  right: -80px;
+  background-color: #01746c;
+}
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .card {
     flex-direction: column;
@@ -18,6 +46,9 @@
   }
 }
 .card a {
+  text-decoration: none;
+}
+.card a:hover {
   text-decoration: none;
 }
 .card a h3 {

@@ -30,6 +30,14 @@
                 box-shadow: none;
                 border-radius: 0;
             }
+
+            //Ipad screen
+            @media only screen 
+            and (min-device-width : 768px) 
+            and (max-device-width : 1024px) {
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
     }
 

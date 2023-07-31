@@ -11,6 +11,53 @@
     box-shadow:  20px 20px 40px #cdcecf, -20px -20px 40px #ffffff;
     border: 1px solid white;
 
+    &:hover {
+        border: 1px solid #01746c;
+        transition: 0.2s ease-in-out;
+
+        // &--descript {
+        //     &::after {
+        //         content: '';
+        //         mask-image: url("../../../../ressources/svg/eye-fill.svg");
+        //         width: 16px;
+        //         height: 16px;
+        //         background-color: #01746c;
+        //     }
+        // }
+    }
+
+    &--descript {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // A revoir
+        &:hover {
+            &::after {
+                content: '';
+                mask-image: url("../../../../ressources/svg/eye.svg");
+                width: 16px;
+                height: 16px;
+                background: #01746c;
+            }
+        }
+
+        &::after {
+            content: '';
+            mask-image: url("../../../../ressources/svg/eye.svg");
+            width: 16px;
+            height: 16px;
+            position: relative;
+            bottom: -10px;
+            right: -80px;
+            background-color: #01746c;
+
+            // &:hover {
+            //     mask-image: url("../../../../ressources/svg/eye-fill.svg");
+            // }
+        }
+    }
+
     // phone screen
     @media only screen 
     and (min-device-width : 320px) 
@@ -22,6 +69,10 @@
     
     a {
         text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
 
         h3 {
             color: #01746c;
