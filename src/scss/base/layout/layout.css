@@ -18,7 +18,7 @@
   background: #f1f2f4;
   box-shadow: inset 20px 20px 60px #cdcecf, inset -20px -20px 60px #ffffff;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .layout-content--wrap {
     margin: 0;
     box-shadow: none;
