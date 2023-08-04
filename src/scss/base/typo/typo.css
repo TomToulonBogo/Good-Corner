@@ -10,6 +10,9 @@ h1 {
   font-weight: 400;
   line-height: normal;
 }
+h1:active {
+  color: black;
+}
 h1::before {
   content: "";
   -webkit-mask-image: url("../../../../ressources/svg/logo-good-corner.svg");

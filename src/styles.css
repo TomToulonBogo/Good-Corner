@@ -1,11 +1,17 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   color: #01746c;
+  height: 100%;
 }
 body a {
   color: #01746c;
+  text-decoration: none;
 }
 body a:hover {
   text-decoration: underline;
@@ -33,9 +39,27 @@ body div {
 .layout-content--wrap {
   margin: 5rem 9.37rem;
   padding: 1.6rem;
-  border-radius: 50px;
+  border-radius: 16px;
   background: #f1f2f4;
   box-shadow: inset 20px 20px 60px #cdcecf, inset -20px -20px 60px #ffffff;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .layout-content--wrap {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .layout-content--wrap {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.layout-signIn {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
 }
 .layout--card {
   display: flex;
@@ -80,6 +104,9 @@ h1 {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+h1:active {
+  color: black;
 }
 h1::before {
   content: "";
@@ -142,7 +169,47 @@ h1::before {
   box-shadow: 20px 20px 40px #cdcecf, -20px -20px 40px #ffffff;
   border: 1px solid white;
 }
-.card h3 {
+.card:hover {
+  border: 1px solid #01746c;
+  transition: 0.2s ease-in-out;
+}
+.card--descript {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card--descript:hover::after {
+  content: "";
+  -webkit-mask-image: url("../../../../ressources/svg/eye.svg");
+          mask-image: url("../../../../ressources/svg/eye.svg");
+  width: 16px;
+  height: 16px;
+  background: #01746c;
+}
+.card--descript::after {
+  content: "";
+  -webkit-mask-image: url("../../../../ressources/svg/eye.svg");
+          mask-image: url("../../../../ressources/svg/eye.svg");
+  width: 16px;
+  height: 16px;
+  position: relative;
+  bottom: -10px;
+  right: -80px;
+  background-color: #01746c;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+.card a {
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: none;
+}
+.card a h3 {
   color: #01746c;
 }
 .card--my-listings {
@@ -162,6 +229,7 @@ footer {
   bottom: 0;
   background-color: #f1f2f4;
   z-index: 2;
+  border-top: 2px solid #01746c;
 }
 
 .form {
@@ -183,6 +251,17 @@ footer {
   font-size: 16px;
   padding: 8px;
 }
+.form--input input:focus {
+  border: 1px solid #01746c;
+}
+.form--input textarea {
+  border-radius: 8px;
+  border: 1px solid var(--grey-100, #FFF);
+  background: linear-gradient(135deg, #E5E6E8 0%, #FDFEFF 100%);
+  box-shadow: 4px 4px 10px 0px rgba(188, 189, 190, 0.9), -4px -4px 8px 0px rgba(255, 255, 255, 0.9), 4px -4px 8px 0px rgba(188, 189, 190, 0.2), -4px 4px 8px 0px rgba(188, 189, 190, 0.2), -1px -1px 2px 0px rgba(188, 189, 190, 0.5) inset, 1px 1px 2px 0px rgba(255, 255, 255, 0.3) inset;
+  font-size: 16px;
+  padding: 8px;
+}
 
 .nav-bar {
   border-bottom: 2px solid var(--grey-100, #01746c);
@@ -190,6 +269,35 @@ footer {
   padding: 1.5rem 5rem;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0;
+  }
+  .nav-bar h1 {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 50px;
+  }
+  .nav-bar--buttons {
+    justify-items: center;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .nav-bar h1 {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 52px;
+  }
+  .nav-bar--buttons {
+    justify-items: center;
+  }
 }
 .nav-bar > a {
   text-decoration: none;

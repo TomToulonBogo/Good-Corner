@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Listing } from '../type';
 import { ListingsService } from '../listings.service';
+import { pipe, tap } from 'rxjs';
 
 @Component({
   selector: 'app-contact-page',
@@ -22,10 +23,13 @@ export class ContactPageComponent {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.listingsService.getListingById(id)
-      .subscribe(listing => {
+    .pipe(
+      tap(listing => {
         this.listing = listing;
         this.message = `Hi, I'm interested in your ${this.listing.name.toLowerCase()} !`;
-      });    
+      })
+    )
+    .subscribe();    
   }
 
   sendMessage(): void {

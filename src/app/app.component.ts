@@ -14,6 +14,7 @@ export class AppComponent {
     public auth: AngularFireAuth,
   ) { }
 
+  // Méthode permettant de se connecter via Google
   signInClicked() {
     this.auth.signInWithPopup(new GoogleAuthProvider());
   }

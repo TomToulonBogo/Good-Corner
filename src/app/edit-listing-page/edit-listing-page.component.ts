@@ -28,7 +28,7 @@ export class EditListingPageComponent {
     .subscribe();
   }
   
-  onSubmit({name, description, price}:{[key:string]:any} /* A re-vérifier : https://medium.com/front-end-weekly/typescript-error-ts7031-makes-me-go-huh-c81cf76c829b */): void {
+  onSubmit({name, description, price}:{[key:string]:any}): void {
     this.listingsService.editListing(this.listing.id, name, description, price)
     .pipe(
       tap(() => {

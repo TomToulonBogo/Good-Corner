@@ -17,7 +17,7 @@
         &--wrap {
             margin: 5rem 9.37rem;
             padding: 1.6rem;
-            border-radius: 50px;
+            border-radius: 16px;
             background: #f1f2f4;
             box-shadow: inset 20px 20px 60px #cdcecf,
             inset -20px -20px 60px #ffffff;
@@ -39,6 +39,12 @@
                 margin-right: 0;
             }
         }
+    }
+
+    &-signIn {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
     }
 
     &--card {

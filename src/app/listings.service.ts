@@ -30,14 +30,17 @@ export class ListingsService {
     private auth: AngularFireAuth,
   ) { }
 
+  // Méthode permettant d'afficher les annonces sur la page principal du site
   getListings(): Observable<Listing[]> {
     return this.http.get<Listing[]>('/api/listings');
   }
 
+  // Méthode permettant de sélectionner une annonce via son id
   getListingById(id: string|null): Observable<Listing> {
     return this.http.get<Listing>(`/api/listings/${id}`);
   }
 
+  // Méthode permettant d'incrémenter le nombre de vues sur une annonce
   addViewToListing(id: string|null): Observable<Listing> {
     return this.http.post<Listing>(
       `/api/listings/${id}/add-view`,
@@ -46,6 +49,7 @@ export class ListingsService {
     );
   }
 
+  // Méthode permettant aux utilisateurs de récupérer leurs propres annonces
   getListingsForUser(): Observable<Listing[]> {
     return new Observable<Listing[]>(observer => {
       this.auth.user.pipe(
@@ -69,6 +73,7 @@ export class ListingsService {
     });
   }
 
+  // Méthode permettant aux utilisateurs de suppromer leurs annonces
   deleteListing(id: string|null): Observable<any> {
     return new Observable<any>(observer => {
       this.auth.user.pipe(
@@ -87,6 +92,7 @@ export class ListingsService {
     })
   }
 
+  // Méthode permettant aux utilisateurs de créer de nouvelles annonces
   createListing(name: string, description: string, price: number): Observable<Listing> {
     return new Observable<Listing>(observer => {
       this.auth.user.pipe(
@@ -108,6 +114,7 @@ export class ListingsService {
     })
   }
 
+  // Méthode permettant aux utilisateurs de modifiers leurs annonces
   editListing(id: string, name: string, description: string, price: number): Observable<Listing> {
     return new Observable<Listing>(observer => {
       this.auth.user.pipe(
